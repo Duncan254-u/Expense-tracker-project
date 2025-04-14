@@ -57,14 +57,17 @@ const RadioBox = styled.div`
 `;
 
 const AddTransactionView = () => {
-  return (
+    const [amount, setAmount] = useState("");
+    const [desc, setDesc] = useState("");
+  const [type, setType] = useState("EXPENSE");
+    return (
     <AddTransactionContainer>
-      <input placeholder="Amount" />
-      <input placeholder="Description" />
+      <input placeholder="Amount" value={amount}  onChange={(e)=> setAmount(e.target.value)}/>
+      <input placeholder="Description" value={amount}  onChange={(e)=> setAmount(e.target.value)} />
       <RadioBox>
-        <input type="radio" id="expense" name="type" value="EXPENSE" />
+        <input type="radio" id="expense" name="type" value="EXPENSE" checked ={type=="EXPENSE"} />
         <label htmlFor="expense">Expense</label>
-        <input type="radio" id="income" name="type" value="INCOME" />
+        <input type="radio" id="income" name="type" value="INCOME" checked ={type=="INCOME"} />
         <label htmlFor="income">income</label>
       </RadioBox>
       <AddTransaction>Add Transaction</AddTransaction>
