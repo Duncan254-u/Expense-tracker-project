@@ -36,6 +36,7 @@ const AddTransactionContainer = styled.div`
   flex-direction: column;
   border: 1px solid black;
   gap: 10px;
+  width: 100%;
   padding: 15px 20px;
   margin: 10px 20px;
 
@@ -72,7 +73,7 @@ const AddTransactionView = () => {
 };
 
 const OverviewComponent = (props) => {
-  const [isAddTxnVisible, toggleAddTxn] = useState(true);
+  const [isAddTxnVisible, toggleAddTxn] = useState(false);
   return (
     <Container>
       <BalanceBox>
