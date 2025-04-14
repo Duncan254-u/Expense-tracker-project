@@ -56,18 +56,23 @@ const RadioBox = styled.div`
   width: 100%;
 `;
 
-const AddTransactionView = () => {
+const AddTransactionView = (props) => {
     const [amount, setAmount] = useState("");
     const [desc, setDesc] = useState("");
   const [type, setType] = useState("EXPENSE");
-    return (
+  const addTransaction = () => {
+    console.log({amount, desc, type});
+    props.toggleAddTxn();
+
+    }
+  return (
     <AddTransactionContainer>
       <input placeholder="Amount" value={amount}  onChange={(e)=> setAmount(e.target.value)}/>
       <input placeholder="Description" value={amount}  onChange={(e)=> setAmount(e.target.value)} />
       <RadioBox>
-        <input type="radio" id="expense" name="type" value="EXPENSE" checked ={type=="EXPENSE"} />
+        <input type="radio" id="expense" name="type" value="EXPENSE" checked ={type=="EXPENSE"} onChange={(e)=> setType(e.target.value)} />
         <label htmlFor="expense">Expense</label>
-        <input type="radio" id="income" name="type" value="INCOME" checked ={type=="INCOME"} />
+        <input type="radio" id="income" name="type" value="INCOME" checked ={type=="INCOME"} onChange={(e)=> setType(e.target.value)}/>
         <label htmlFor="income">income</label>
       </RadioBox>
       <AddTransaction>Add Transaction</AddTransaction>
@@ -85,7 +90,7 @@ const OverviewComponent = (props) => {
           {isAddTxnVisible ? "Cancel" : "ADD"}
         </AddTransaction>
       </BalanceBox>
-      {isAddTxnVisible && <AddTransactionView />}
+      {isAddTxnVisible && <AddTransactionView toggleAdTxn={toggleAddTxn}/>}
     </Container>
   );
 };
