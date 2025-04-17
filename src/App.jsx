@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HomeComponent from "./Modules/home";
 
-// Styled Components
+
 const Container = styled.div`
   background-color: white;
   color: #0d1d2c;

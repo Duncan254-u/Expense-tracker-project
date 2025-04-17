@@ -86,7 +86,7 @@ const RadioBox = styled.div`
   }
 `;
 
-// Component to Add Transactions
+
 const AddTransactionView = ({ visible, toggleAddTxn, addTransaction }) => {
   const [amount, setAmount] = useState("");
   const [desc, setDesc] = useState("");

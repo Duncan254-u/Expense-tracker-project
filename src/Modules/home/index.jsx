@@ -3,7 +3,7 @@ import styled from "styled-components";
 import OverviewComponent from "./OverviewComponent";
 import TransactionsComponent from "./TransactionComponent";
 
-// Styled Component
+
 const Container = styled.div`
   background-color: white;
   color: #0d1d2c;
