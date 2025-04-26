@@ -1,5 +1,10 @@
 
-🚀 Features
+https://expense-tracker-project-blush.vercel.app/
+
+
+
+ Features
+
 Add new expenses with a title, amount, and date.
 
 View a list of all expenses.
@@ -10,7 +15,9 @@ Responsive design for desktop and mobile.
 
 Clean and minimal UI powered by styled-components.
 
-🛠️ Built With
+
+Built With
+
 React
 
 styled-components
@@ -19,7 +26,8 @@ Vite
 
 
 
-✨ Future Improvements
+Future Improvements
+
 Add expense categories (e.g., Food, Travel, Bills).
 
 Implement monthly/yearly summaries.
